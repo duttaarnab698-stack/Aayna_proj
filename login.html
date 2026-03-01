@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAYNA | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login">
+  <div class="login-bg-shape shape-1"></div>
+  <div class="login-bg-shape shape-2"></div>
+  <div class="login-bg-shape shape-3"></div>
+
+  <main class="premium-login-page login-fade-in" id="loginPage">
+    <section class="premium-login-card">
+      <p class="premium-logo">AAYNA</p>
+      <p class="premium-tagline">Reflecting Creativity</p>
+      <p class="premium-subline">Three Creators. One Vision.</p>
+
+      <form id="loginForm" class="premium-login-form" novalidate>
+        <div class="floating-group has-phone-flag" id="groupIdentifier">
+          <span class="phone-flag" aria-hidden="true">🇮🇳</span>
+          <input id="loginIdentifier" type="text" placeholder=" " autocomplete="username" value="+91 " required />
+          <label for="loginIdentifier">Email or Phone (+91XXXXXXXXXX)</label>
+        </div>
+
+        <div class="floating-group" id="groupPassword">
+          <input id="loginPassword" type="password" placeholder=" " autocomplete="current-password" required />
+          <label for="loginPassword">Password</label>
+        </div>
+
+        <p id="loginError" class="premium-error" aria-live="polite"></p>
+
+        <button type="submit" id="loginBtn" class="premium-login-btn">
+          <span class="btn-label">Login</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="ripple-layer" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="auth-alt-text">New here? <a href="register.html">Create Account</a></p>
+    </section>
+  </main>
+
+  <div id="globalToast" class="auth-toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

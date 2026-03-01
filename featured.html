@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Featured Work | AAYNA Creator Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="featured">
+  <div class="bg-glow"></div>
+
+  <header class="navbar" id="home">
+    <div class="container nav-wrap">
+      <a href="index.html#home" class="logo" aria-label="&#2438;ayna Home">
+        <img src="logo.png" alt="&#2438;ayna logo" class="logo-icon" />
+        <span>&#2438;ayna</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">Menu</button>
+      <nav id="navMenu">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="featured.html" class="is-active">Featured Work</a>
+        <a href="index.html#creativeProcess">Process</a>
+        <a href="index.html#collabSection">Collaboration</a>
+        <a href="index.html#contact">Team</a>
+      </nav>
+      <div id="navAuth" class="nav-auth"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section featured-hero-section">
+      <div class="container">
+        <div class="featured-hero reveal">
+          <p class="featured-kicker">AAYNA Reel Vault</p>
+          <h1>Featured Stories That Hit In Seconds</h1>
+          <p>
+            Curated short-form films, music reels, and cinematic moments crafted for high retention and emotional impact.
+          </p>
+          <div class="featured-hero-row">
+            <a href="#videos" class="btn">Browse All Videos</a>
+            <a href="index.html#collabSection" class="action-btn">Book A Project</a>
+          </div>
+          <div class="featured-stats" aria-label="Featured work highlights">
+            <article>
+              <strong>03</strong>
+              <span>Core Creators</span>
+            </article>
+            <article>
+              <strong>04+</strong>
+              <span>Signature Stories</span>
+            </article>
+            <article>
+              <strong>1</strong>
+              <span>Visual Identity</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Featured Work</h2>
+          <p>Signature reels and short films crafted with cinematic storytelling.</p>
+        </div>
+
+        <div class="controls reveal">
+          <div class="filter-buttons" id="filterButtons">
+            <button class="active" data-category="All">All</button>
+            <button data-category="Music">Music</button>
+            <button data-category="Comedy">Comedy</button>
+            <button data-category="Short Film">Short Film</button>
+            <button data-category="Short Reels">Short Reels</button>
+          </div>
+          <input type="text" id="searchInput" placeholder="Search video title..." aria-label="Search video" />
+        </div>
+
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+    </section>
+
+    <section class="section final-cta-section">
+      <div class="container final-cta-wrap reveal">
+        <h2>Want This Style For Your Brand?</h2>
+        <a href="index.html#collabSection" class="btn final-cta-btn">Start Collaboration</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <h3 class="footer-brand">&#2438;ayna&#8482;</h3>
+      <p class="footer-tagline">"Three Creators. One Vision."</p>
+      <p class="footer-copy">&#169; 2026 &#2438;ayna. All rights reserved.</p>
+      <p class="footer-note">Built with passion by Arnab, Debonkita &amp; Sanket</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal" aria-label="Close video">X</button>
+      <h3 id="modalTitle"></h3>
+      <div class="player-wrap">
+        <iframe
+          id="modalPlayer"
+          src=""
+          title="Video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <video id="modalLocalPlayer" controls playsinline class="hidden">
+          <source id="modalLocalSource" src="" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="authModal" aria-hidden="true">
+    <div class="auth-modal-card" id="authCard">
+      <button class="auth-close" id="closeAuthModal" aria-label="Close">X</button>
+      <h3>Login Required</h3>
+
+      <form id="authLoginForm" class="auth-form" novalidate>
+        <div class="floating-group auth-group has-phone-flag" id="loginIdentifierGroup">
+          <span class="phone-flag" aria-hidden="true">&#127470;&#127475;</span>
+          <input id="authIdentifier" type="text" placeholder=" " value="+91 " required />
+          <label for="authIdentifier">Email or Phone (+91XXXXXXXXXX)</label>
+        </div>
+        <div class="floating-group auth-group" id="loginPassGroup">
+          <input id="authPassword" type="password" placeholder=" " required />
+          <label for="authPassword">Password</label>
+        </div>
+        <p id="authLoginError" class="premium-error" aria-live="polite"></p>
+        <div class="auth-row">
+          <button type="submit" class="premium-login-btn auth-btn" id="authLoginBtn">
+            <span class="btn-label">Login</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="ripple-layer" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="ghost-auth-btn" id="openRegisterBtn">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="registerModal" aria-hidden="true">
+    <div class="auth-modal-card" id="registerCard">
+      <button class="auth-close" id="closeRegisterModal" aria-label="Close">X</button>
+      <h3>Create Account</h3>
+      <form id="authRegisterForm" class="auth-form" novalidate>
+        <div class="floating-group auth-group" id="regFirstNameGroup">
+          <input id="regFirstName" type="text" placeholder=" " required />
+          <label for="regFirstName">First Name *</label>
+        </div>
+        <div class="floating-group auth-group" id="regMiddleNameGroup">
+          <input id="regMiddleName" type="text" placeholder=" " />
+          <label for="regMiddleName">Middle Name</label>
+        </div>
+        <div class="floating-group auth-group" id="regLastNameGroup">
+          <input id="regLastName" type="text" placeholder=" " required />
+          <label for="regLastName">Last Name *</label>
+        </div>
+        <div class="floating-group auth-group has-phone-flag" id="regPhoneGroup">
+          <span class="phone-flag" aria-hidden="true">&#127470;&#127475;</span>
+          <input id="regPhone" type="tel" inputmode="tel" placeholder=" " value="+91 " />
+          <label for="regPhone">Phone Number (+91XXXXXXXXXX)</label>
+        </div>
+        <div class="floating-group auth-group" id="regEmailGroup">
+          <input id="regEmail" type="email" placeholder=" " />
+          <label for="regEmail">Email (Optional)</label>
+        </div>
+        <div class="floating-group auth-group" id="regPassGroup">
+          <input id="regPassword" type="password" placeholder=" " required />
+          <label for="regPassword">Password</label>
+        </div>
+        <p id="authRegisterError" class="premium-error" aria-live="polite"></p>
+        <div class="auth-row">
+          <button type="submit" class="premium-login-btn auth-btn" id="authRegisterBtn">
+            <span class="btn-label">Create Account</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="ripple-layer" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="ghost-auth-btn" id="backToLoginBtn">Back to Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="globalToast" class="auth-toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

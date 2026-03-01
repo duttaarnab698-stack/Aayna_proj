@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAYNA Creator Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="index">
+  <div class="bg-glow"></div>
+
+  <header class="navbar" id="home">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo" aria-label="আayna Home">
+        <img src="logo.png" alt="আayna logo" class="logo-icon" />
+        <span>আayna</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">Menu</button>
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="featured.html">Featured Work</a>
+        <a href="#creativeProcess">Process</a>
+        <a href="#collabSection">Collaboration</a>
+        <a href="#contact">Team</a>
+      </nav>
+      <div id="navAuth" class="nav-auth"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="heroSection">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video hero-video-a active" id="heroVideoA" playsinline preload="metadata" muted></video>
+        <video class="hero-video hero-video-b" id="heroVideoB" playsinline preload="metadata" muted></video>
+        <div class="hero-fallback" id="heroFallback"></div>
+        <div class="hero-overlay-dark"></div>
+        <div class="hero-overlay-gradient"></div>
+      </div>
+      <div class="container hero-grid reveal">
+        <div class="hero-content">
+          <div class="hero-brand-chip" aria-hidden="true">
+            <img src="logo.png" alt="" />
+            <span>Signature Visual Identity</span>
+          </div>
+          <p class="kicker">Instagram Reels + Short Films</p>
+          <h1><span class="hero-title-accent">আayna</span></h1>
+          <p class="tagline">Crafting cinematic short-form stories that hit hard in 30 seconds.</p>
+          <div class="hero-labels" aria-hidden="true">
+            <span>Story-driven</span>
+            <span>30s Impact</span>
+            <span>Cinematic Edit</span>
+          </div>
+          <div class="hero-cta-row">
+            <a href="featured.html" class="btn hero-primary-btn">Watch Videos</a>
+            <button class="action-btn hero-secondary-btn protected-action" data-action="follow">Follow Creator</button>
+          </div>
+          <p class="hero-micro">New reel drops every week.</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <p class="hero-card-kicker">Latest Reel</p>
+            <span class="live-badge">
+              <span class="live-dot" aria-hidden="true"></span>
+              Live Now
+            </span>
+          </div>
+          <h3 class="hero-card-title" id="latestReelTitle">&#x09B6;&#x09C7;&#x09B7; &#x09B8;&#x09C1;&#x09B0; &#128578;&#128148;</h3>
+          <p class="hero-card-meta" id="latestReelMeta">Short Film | Feb 24, 2026</p>
+          <a href="featured.html" id="latestVideoLink" class="hero-card-link">
+            Open In Website
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container final-cta-wrap reveal">
+        <h2>Explore Our Full Video Library</h2>
+        <a href="featured.html" class="btn final-cta-btn">Open Featured Work</a>
+      </div>
+    </section>
+
+    <section class="section" id="creativeProcess">
+      <div class="container reveal">
+        <div class="section-head">
+          <h2>Our Creative Process</h2>
+          <p>Idea to publish, each stage is crafted with purpose.</p>
+        </div>
+        <div class="process-steps" aria-label="Creative process timeline">
+          <button class="process-step process-trigger" type="button" data-detail="Idea - Every masterpiece begins with imagination.">
+            <span class="process-icon"><i class="fa-regular fa-lightbulb"></i></span>
+            <h3>Idea</h3>
+          </button>
+          <button class="process-step process-trigger" type="button" data-detail="Shoot - We capture emotion, not just footage.">
+            <span class="process-icon"><i class="fa-solid fa-camera"></i></span>
+            <h3>Shoot</h3>
+          </button>
+          <button class="process-step process-trigger" type="button" data-detail="Edit - We turn moments into stories.">
+            <span class="process-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <h3>Edit</h3>
+          </button>
+          <button class="process-step process-trigger" type="button" data-detail="Publish - We share experiences, not just videos.">
+            <span class="process-icon"><i class="fa-solid fa-paper-plane"></i></span>
+            <h3>Publish</h3>
+          </button>
+        </div>
+        <div class="process-toast" id="processToast" aria-live="polite">
+          <div class="process-toast-head">
+            <span class="process-toast-icon"><i class="fa-regular fa-lightbulb"></i></span>
+            <strong id="processToastTitle">Idea</strong>
+          </div>
+          <p id="processToastText">Every masterpiece begins with imagination.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section collab-section" id="collabSection">
+      <div class="container collab-wrap reveal">
+        <div class="collab-split">
+          <div class="collab-left">
+            <p class="collab-kicker">Collaboration Studio</p>
+            <h2>Have a Story to Tell? Let’s Bring It to Life.</h2>
+            <p class="collab-subtext">We collaborate with brands, creators, and storytellers to craft visually impactful content.</p>
+            <a href="#contact" class="collab-action-btn start-project-btn">Start a Project</a>
+          </div>
+          <div class="collab-visual" aria-hidden="true">
+            <div class="collab-visual-frame">
+              <video class="collab-preview-video" autoplay muted loop playsinline preload="metadata">
+                <source src="aayna_cinematic_15s.mp4" type="video/mp4" />
+              </video>
+              <p class="collab-preview-label">Cinematic Preview</p>
+              <div class="scanline"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collab-service-grid" aria-label="Collaboration services">
+          <article class="collab-service-card">
+            <span class="collab-service-icon"><i class="fa-solid fa-handshake-angle"></i></span>
+            <h3>Brand Collaboration</h3>
+          </article>
+          <article class="collab-service-card">
+            <span class="collab-service-icon"><i class="fa-solid fa-clapperboard"></i></span>
+            <h3>Reel Creation</h3>
+          </article>
+          <article class="collab-service-card">
+            <span class="collab-service-icon"><i class="fa-solid fa-film"></i></span>
+            <h3>Short Film Production</h3>
+          </article>
+          <article class="collab-service-card">
+            <span class="collab-service-icon"><i class="fa-solid fa-camera-retro"></i></span>
+            <h3>Creative Shoot</h3>
+          </article>
+          <article class="collab-service-card">
+            <span class="collab-service-icon"><i class="fa-solid fa-bullhorn"></i></span>
+            <h3>Promotion Content</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap reveal">
+        <h2 class="contact-title">Or Connect Directly With Our Creators</h2>
+        <p class="contact-subtitle">Choose a team member and start a conversation.</p>
+
+        <div class="team-grid">
+          <article class="team-card" data-glow="cyan">
+            <img class="team-photo" src="images/arnab-dutta.jpg" alt="Arnab Dutta profile photo" />
+            <h3>Arnab Dutta</h3>
+            <p class="team-role">Editing &amp; Direction</p>
+            <div class="team-actions">
+              <a href="https://instagram.com/arnab_dutta._" target="_blank" rel="noopener noreferrer" class="team-btn ig-btn protected-action" data-action="follow" aria-label="Arnab Dutta Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+              </a>
+              <a href="https://www.linkedin.com/in/arnab-dutta-444469321" target="_blank" rel="noopener noreferrer" class="team-btn li-btn protected-action" data-action="follow" aria-label="Arnab Dutta LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                LinkedIn
+              </a>
+              <a href="https://wa.me/917908606863?text=Hi%20Arnab,%20I%20want%20to%20connect%20with%20you%20from%20%E0%A6%86ayna%20website." target="_blank" rel="noopener noreferrer" class="team-btn wa-btn" aria-label="Arnab Dutta WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+              </a>
+              <a href="mailto:duttaarnab698@gmail.com?subject=Connect%20with%20Arnab%20from%20Aayna%20Website" class="team-btn mail-btn" aria-label="Email Arnab Dutta">
+                <i class="fa-regular fa-envelope"></i>
+                Email
+              </a>
+            </div>
+          </article>
+
+          <article class="team-card" data-glow="purple">
+            <img class="team-photo" src="debonkita.jpeg" alt="Debonkita Dutta profile photo" />
+            <h3>Debonkita Dutta</h3>
+            <p class="team-role">Acting &amp; Creative Concept</p>
+            <div class="team-actions">
+              <a href="https://instagram.com/__debonkita__" target="_blank" rel="noopener noreferrer" class="team-btn ig-btn protected-action" data-action="follow" aria-label="Debonkita Dutta Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+              </a>
+              <a href="https://www.linkedin.com/in/debonkita-dutta-2a5a6833b" target="_blank" rel="noopener noreferrer" class="team-btn li-btn protected-action" data-action="follow" aria-label="Debonkita Dutta LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                LinkedIn
+              </a>
+              <a href="https://wa.me/918101571164?text=Hi%20Debonkita,%20I%20want%20to%20connect%20with%20you%20from%20%E0%A6%86ayna%20website." target="_blank" rel="noopener noreferrer" class="team-btn wa-btn" aria-label="Debonkita Dutta WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+              </a>
+              <a href="mailto:debonkitadutta2025@gmail.com?subject=Connect%20with%20Debonkita%20from%20Aayna%20Website" class="team-btn mail-btn" aria-label="Email Debonkita Dutta">
+                <i class="fa-regular fa-envelope"></i>
+                Email
+              </a>
+            </div>
+          </article>
+
+          <article class="team-card" data-glow="cyan">
+            <img class="team-photo" src="sanket.jpeg" alt="Snaket Pal profile photo" />
+            <h3>Snaket Pal</h3>
+            <p class="team-role">Cinematography &amp; Production</p>
+            <div class="team-actions">
+              <a href="https://instagram.com/sanket_8426" target="_blank" rel="noopener noreferrer" class="team-btn ig-btn protected-action" data-action="follow" aria-label="Snaket Pal Instagram">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+              </a>
+              <a href="https://www.linkedin.com/in/sanket-pal-04520933b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="team-btn li-btn protected-action" data-action="follow" aria-label="Snaket Pal LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                LinkedIn
+              </a>
+              <a href="https://wa.me/919002848480?text=Hi%20Sanket,%20I%20want%20to%20connect%20with%20you%20from%20%E0%A6%86ayna%20website." target="_blank" rel="noopener noreferrer" class="team-btn wa-btn" aria-label="Snaket Pal WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+              </a>
+              <a href="mailto:sanketpal8426@gmail.com?subject=Connect%20with%20Sanket%20from%20Aayna%20Website" class="team-btn mail-btn" aria-label="Email Snaket Pal">
+                <i class="fa-regular fa-envelope"></i>
+                Email
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section final-cta-section">
+      <div class="container final-cta-wrap reveal">
+        <h2>Ready to Create Something Amazing?</h2>
+        <a href="#collabSection" class="btn final-cta-btn">Work With আayna</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <h3 class="footer-brand">আayna™</h3>
+      <p class="footer-tagline">"Three Creators. One Vision."</p>
+      <p class="footer-copy">© 2026 আayna. All rights reserved.</p>
+      <p class="footer-note">Built with passion by Arnab, Debonkita &amp; Sanket</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal" aria-label="Close video">X</button>
+      <h3 id="modalTitle"></h3>
+      <div class="player-wrap">
+        <iframe
+          id="modalPlayer"
+          src=""
+          title="Video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+        <video id="modalLocalPlayer" controls playsinline class="hidden">
+          <source id="modalLocalSource" src="" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="authModal" aria-hidden="true">
+    <div class="auth-modal-card" id="authCard">
+      <button class="auth-close" id="closeAuthModal" aria-label="Close">X</button>
+      <h3>Login Required</h3>
+
+      <form id="authLoginForm" class="auth-form" novalidate>
+        <div class="floating-group auth-group has-phone-flag" id="loginIdentifierGroup">
+          <span class="phone-flag" aria-hidden="true">🇮🇳</span>
+          <input id="authIdentifier" type="text" placeholder=" " value="+91 " required />
+          <label for="authIdentifier">Email or Phone (+91XXXXXXXXXX)</label>
+        </div>
+        <div class="floating-group auth-group" id="loginPassGroup">
+          <input id="authPassword" type="password" placeholder=" " required />
+          <label for="authPassword">Password</label>
+        </div>
+        <p id="authLoginError" class="premium-error" aria-live="polite"></p>
+        <div class="auth-row">
+          <button type="submit" class="premium-login-btn auth-btn" id="authLoginBtn">
+            <span class="btn-label">Login</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="ripple-layer" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="ghost-auth-btn" id="openRegisterBtn">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth-modal" id="registerModal" aria-hidden="true">
+    <div class="auth-modal-card" id="registerCard">
+      <button class="auth-close" id="closeRegisterModal" aria-label="Close">X</button>
+      <h3>Create Account</h3>
+      <form id="authRegisterForm" class="auth-form" novalidate>
+        <div class="floating-group auth-group" id="regFirstNameGroup">
+          <input id="regFirstName" type="text" placeholder=" " required />
+          <label for="regFirstName">First Name *</label>
+        </div>
+        <div class="floating-group auth-group" id="regMiddleNameGroup">
+          <input id="regMiddleName" type="text" placeholder=" " />
+          <label for="regMiddleName">Middle Name</label>
+        </div>
+        <div class="floating-group auth-group" id="regLastNameGroup">
+          <input id="regLastName" type="text" placeholder=" " required />
+          <label for="regLastName">Last Name *</label>
+        </div>
+        <div class="floating-group auth-group has-phone-flag" id="regPhoneGroup">
+          <span class="phone-flag" aria-hidden="true">🇮🇳</span>
+          <input id="regPhone" type="tel" inputmode="tel" placeholder=" " value="+91 " />
+          <label for="regPhone">Phone Number (+91XXXXXXXXXX)</label>
+        </div>
+        <div class="floating-group auth-group" id="regEmailGroup">
+          <input id="regEmail" type="email" placeholder=" " />
+          <label for="regEmail">Email (Optional)</label>
+        </div>
+        <div class="floating-group auth-group" id="regPassGroup">
+          <input id="regPassword" type="password" placeholder=" " required />
+          <label for="regPassword">Password</label>
+        </div>
+        <p id="authRegisterError" class="premium-error" aria-live="polite"></p>
+        <div class="auth-row">
+          <button type="submit" class="premium-login-btn auth-btn" id="authRegisterBtn">
+            <span class="btn-label">Create Account</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="ripple-layer" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="ghost-auth-btn" id="backToLoginBtn">Back to Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="globalToast" class="auth-toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

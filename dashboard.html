@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAYNA | Creator Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p>Loading Dashboard...</p>
+  </div>
+
+  <div class="dashboard-shell fade-in-page">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <p class="brand">AAYNA</p>
+        <button id="closeSidebar" class="icon-btn" aria-label="Close menu">X</button>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-section="dashboardSection">Dashboard</button>
+        <button class="nav-btn" data-section="uploadSection">Upload Video</button>
+        <button class="nav-btn" data-section="manageSection">Manage Videos</button>
+        <button class="nav-btn logout" id="sidebarLogout">Logout</button>
+      </nav>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button id="openSidebar" class="icon-btn" aria-label="Open menu">Menu</button>
+        <div class="creator-meta">
+          <div class="profile-dot">A</div>
+          <div>
+            <p class="creator-name">AAYNA Creator</p>
+            <p class="creator-role">Content Manager</p>
+          </div>
+        </div>
+        <button class="ghost-btn" id="topLogout">Logout</button>
+      </header>
+
+      <main class="content-area">
+        <section id="dashboardSection" class="panel active-panel">
+          <h1>Dashboard Overview</h1>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <p>Total Videos</p>
+              <h2 id="totalVideos">0</h2>
+            </article>
+            <article class="stat-card">
+              <p>Total Views</p>
+              <h2 id="totalViews">0</h2>
+            </article>
+            <article class="stat-card">
+              <p>Total Uploads</p>
+              <h2 id="totalUploads">0</h2>
+            </article>
+          </div>
+        </section>
+
+        <section id="uploadSection" class="panel">
+          <h1>Upload Video</h1>
+          <form id="uploadForm" class="upload-form" novalidate>
+            <label for="videoTitle">Video Title</label>
+            <input id="videoTitle" name="videoTitle" type="text" placeholder="Enter title" required />
+
+            <label for="videoCategory">Category</label>
+            <select id="videoCategory" name="videoCategory" required>
+              <option value="" disabled selected>Select category</option>
+              <option>Music</option>
+              <option>Comedy</option>
+              <option>Short Film</option>
+              <option>Short Reels</option>
+              <option>Motivation</option>
+            </select>
+
+            <label for="thumbnailFile">Upload Thumbnail</label>
+            <input id="thumbnailFile" name="thumbnailFile" type="file" accept="image/*" required />
+
+            <label for="videoFile">Upload Video File</label>
+            <input id="videoFile" name="videoFile" type="file" accept="video/*" required />
+
+            <button type="submit" class="glow-btn">Upload Video</button>
+          </form>
+        </section>
+
+        <section id="manageSection" class="panel">
+          <h1>Manage Videos</h1>
+          <div id="manageGrid" class="manage-grid"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

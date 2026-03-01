@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAYNA | Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="register">
+  <div class="login-bg-shape shape-1"></div>
+  <div class="login-bg-shape shape-2"></div>
+  <div class="login-bg-shape shape-3"></div>
+
+  <main class="premium-login-page login-fade-in" id="registerPage">
+    <section class="premium-login-card">
+      <p class="premium-logo">AAYNA</p>
+      <p class="premium-tagline">Create Your Creator Account</p>
+      <p class="premium-subline">Join the AAYNA community</p>
+
+      <form id="registerForm" class="premium-login-form" novalidate>
+        <div class="floating-group" id="groupFullName">
+          <input id="fullName" type="text" placeholder=" " autocomplete="name" required />
+          <label for="fullName">Full Name</label>
+        </div>
+
+        <div class="floating-group" id="groupRegisterEmail">
+          <input id="registerEmail" type="email" placeholder=" " autocomplete="email" required />
+          <label for="registerEmail">Email Address</label>
+        </div>
+
+        <div class="floating-group" id="groupRegisterPassword">
+          <input id="registerPassword" type="password" placeholder=" " autocomplete="new-password" required />
+          <label for="registerPassword">Password</label>
+          <button type="button" id="toggleRegisterPassword" class="icon-toggle" aria-label="Toggle password">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="floating-group" id="groupConfirmPassword">
+          <input id="confirmPassword" type="password" placeholder=" " autocomplete="new-password" required />
+          <label for="confirmPassword">Confirm Password</label>
+          <button type="button" id="toggleConfirmPassword" class="icon-toggle" aria-label="Toggle confirm password">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
+
+        <p id="registerError" class="premium-error" aria-live="polite"></p>
+
+        <button type="submit" id="registerBtn" class="premium-login-btn">
+          <span class="btn-label">Register</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="ripple-layer" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="auth-alt-text">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+
+  <div id="globalToast" class="auth-toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
