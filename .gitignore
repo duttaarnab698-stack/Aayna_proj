@@ -4,5 +4,6 @@ npm-debug.log*
 *.mov
 *.MOV
 *.mp4
+!aayna_cinematic_15s.mp4
 *.heic
 videos/
