@@ -16,7 +16,7 @@ const videoData = [
     views: "New",
     date: "Feb 21, 2026",
     thumbnail: "images/bangla-vasha-thumb.jpeg",
-    videoUrl: "videos/bangla-vasha.mov",
+    videoUrl: "videos/bangla-vasha.mp4",
     isPortrait: true
   },
   {
@@ -26,7 +26,7 @@ const videoData = [
     views: "New",
     date: "Feb 15, 2026",
     thumbnail: "images/ogochalo-shohor-thumb.jpg",
-    videoUrl: "videos/ogochalo-shohor.mov",
+    videoUrl: "videos/ogochalo-shohor.mp4",
     isPortrait: true
   },
   {
@@ -36,7 +36,7 @@ const videoData = [
     views: "New",
     date: "Feb 14, 2026",
     thumbnail: "images/black-ethnic-thumb.jpg",
-    videoUrl: "videos/black-ethnic.mov",
+    videoUrl: "videos/black-ethnic.mp4",
     isPortrait: true
   },
   {
@@ -46,7 +46,7 @@ const videoData = [
     views: "New",
     date: "Feb 24, 2026",
     thumbnail: "images/shesh-sur-thumb.jpg",
-    videoUrl: "videos/shesh-sur.mov",
+    videoUrl: "videos/shesh-sur.mp4",
     isPortrait: true
   }
 ];
@@ -58,7 +58,7 @@ const featuredCreationsData = [
     duration: "00:37",
     category: "Music",
     thumbnail: "images/bangla-vasha-thumb.jpeg",
-    videoUrl: "videos/bangla-vasha.mov",
+    videoUrl: "videos/bangla-vasha.mp4",
     isPortrait: true
   },
   {
@@ -67,7 +67,7 @@ const featuredCreationsData = [
     duration: "00:44",
     category: "Short Film",
     thumbnail: "images/shesh-sur-thumb.jpg",
-    videoUrl: "videos/shesh-sur.mov",
+    videoUrl: "videos/shesh-sur.mp4",
     isPortrait: true
   },
   {
@@ -76,16 +76,16 @@ const featuredCreationsData = [
     duration: "00:28",
     category: "Short Reels",
     thumbnail: "images/ogochalo-shohor-thumb.jpg",
-    videoUrl: "videos/ogochalo-shohor.mov",
+    videoUrl: "videos/ogochalo-shohor.mp4",
     isPortrait: true
   }
 ];
 
 // Cinematic hero background reels.
 const heroReelVideos = [
-  { src: "videos/shesh-sur.mov", thumb: "images/shesh-sur-thumb.jpg" },
-  { src: "videos/ogochalo-shohor.mov", thumb: "images/ogochalo-shohor-thumb.jpg" },
-  { src: "videos/black-ethnic.mov", thumb: "images/black-ethnic-thumb.jpg" }
+  { src: "videos/shesh-sur.mp4", thumb: "images/shesh-sur-thumb.jpg" },
+  { src: "videos/ogochalo-shohor.mp4", thumb: "images/ogochalo-shohor-thumb.jpg" },
+  { src: "videos/black-ethnic.mp4", thumb: "images/black-ethnic-thumb.jpg" }
 ];
 
 let activeCategory = "All";
